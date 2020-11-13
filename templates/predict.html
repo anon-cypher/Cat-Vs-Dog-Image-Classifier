@@ -1,0 +1,14 @@
+<title>Cat Vs Dog Image Classifier</title>
+<h1>Cat Vs Dog Image Classifier</h1>
+<form method="POST" enctype="multipart/form-data" action="predictImage" >
+  {% csrf_token %}
+  <label for="Image">Upload the Image:</label>
+  <br>
+
+  <input type="file" name="filePath" >
+  <input type="submit"  value="Submit">
+  <br>
+  <img src="{{filePathName}}" alt="ImagePath">
+  <br>
+  <h1>It's a {{predictedLabel}}</h1>
+</form>
